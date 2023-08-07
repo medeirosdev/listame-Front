@@ -1,0 +1,5 @@
+<resources>
+    <color name="bootsplash_background">#1976D2</color>
+    <color name="gradientstart">#64B5F6</color>
+    <color name="gradientend">#0D47A1</color>
+</resources>
