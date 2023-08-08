@@ -9,9 +9,11 @@ import { ListEmptyState } from '~/modules/home/components/ListEmptyState';
 
 export const SchedulesSearchScreen: FC = () => {
   const { setSearch, agendas, isLoading } = useAgendasList({
-    isProfile: false,
+    isProfile: false, 
   });
-
+  console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAA AGENDASSS=====================================")
+  console.log(agendas)
+  const publicAgendas = agendas ? agendas.filter(agenda => !agenda.is_private) : [];
   return (
     <SchedulesSearchScreenPageContainer>
       <HeaderRow>
@@ -25,7 +27,7 @@ export const SchedulesSearchScreen: FC = () => {
       </HeaderRow>
       <LayoutContainer>
         {agendas?.length ? (
-          <AgendaList title="Agendas" agendas={agendas} />
+          <AgendaList title="Agendas" agendas={publicAgendas} />
         ) : (
           <ListEmptyState
             isLoading={isLoading}

@@ -3,7 +3,7 @@ import { env } from '~/app/env';
 import { createSerializedApiErrorInterceptor } from '~/app/utils/http/interceptors/createSerializedApiErrorInterceptor';
 
 export const guestApi = Axios.create({
-  baseURL:  'https://9c24-2804-14c-4e0-8290-606e-6048-3f5d-2c7a.ngrok-free.app',
+  baseURL:  'https://0ed1-2804-14c-4e0-8290-85d7-bc3a-61bf-99a2.ngrok-free.app',
 });
 
 guestApi.interceptors.response.use(
